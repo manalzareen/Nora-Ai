@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #090E1D;
+    --bg-surface: #121D35;
+    --bg-elevated: #192640;
+    --cyan: #4ADFFF;
+    --lavender: #A99BFF;
+    --text-primary: #F5F7FC;
+    --text-secondary: #929DB3;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #090E1D;
+    color: #F5F7FC;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Outfit', sans-serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes wave-arm {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-12deg);
+  }
+  75% {
+    transform: rotate(14deg);
+  }
+}
+
+@keyframes pulse-cyan {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes blink-eyes {
+  0%, 92%, 100% {
+    transform: scaleY(1);
+  }
+  96% {
+    transform: scaleY(0.1);
+  }
+}
+
+.animate-float-gentle {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+@keyframes dance-bounce {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-16px) rotate(-6deg) scale(1.05);
+  }
+  50% {
+    transform: translateY(-4px) rotate(4deg) scale(0.98);
+  }
+  75% {
+    transform: translateY(-14px) rotate(-4deg) scale(1.04);
+  }
+}
+
+@keyframes spin-flip {
+  0% {
+    transform: rotateY(0deg) scale(1);
+  }
+  50% {
+    transform: rotateY(180deg) scale(1.15) translateY(-20px);
+  }
+  100% {
+    transform: rotateY(360deg) scale(1) translateY(0px);
+  }
+}
+
+@keyframes orbit-cw {
+  from {
+    transform: rotate(0deg) translateX(120px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(120px) rotate(-360deg);
+  }
+}
+
+@keyframes orbit-ccw {
+  from {
+    transform: rotate(360deg) translateX(100px) rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg) translateX(100px) rotate(0deg);
+  }
+}
+
+.animate-dance {
+  animation: dance-bounce 1.2s ease-in-out infinite;
+}
+
+.animate-spin-flip {
+  animation: spin-flip 0.85s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.animate-orbit-1 {
+  animation: orbit-cw 12s linear infinite;
+}
+
+.animate-orbit-2 {
+  animation: orbit-ccw 9s linear infinite;
+}
+
+/* Custom sleek scrollbar for code editor and panels */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090E1D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #192640;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4ADFFF;
+}

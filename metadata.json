@@ -1,0 +1,6 @@
+{
+  "name": "NORA AI — Personal Programming Teacher",
+  "description": "Learn, debug, understand, and grow with NORA, your personal character-driven programming mentor.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
